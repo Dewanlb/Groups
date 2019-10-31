@@ -1,0 +1,8 @@
+//test//
+// function budgetValue(event) {
+//     document.getElementById("earnings")
+//         .addEventListener("click", function (event) {
+//             event.preventDefault();
+//         })
+// }
+// let earn = document.getElementById("earnings").value;
