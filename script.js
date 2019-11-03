@@ -39,7 +39,7 @@
 function budgetValue(e) {
 
     e.preventDefault();
-    document.querySelector(".weeklyBudget").innerHTML = (`777`);
+    document.querySelector(".weeklyBudget").innerText = "$" + document.querySelector("#earnings").valueAsNumber;
 
 }
 
