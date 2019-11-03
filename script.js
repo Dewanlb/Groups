@@ -36,9 +36,9 @@
 //         console.log(earned)
 //     }
 // }
-function budgetValue() {
+function budgetValue(e) {
 
-    // e.preventDefault();
+    e.preventDefault();
     document.querySelector(".weeklyBudget").innerHTML = (`777`);
 
 }
