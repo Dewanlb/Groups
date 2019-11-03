@@ -42,7 +42,7 @@ let userBudget;
 
 function budgetValue(e) {
 
-    // e.preventDefault();
+    e.preventDefault();
     document.querySelector(".weeklyBudget").innerText = "$" + document.querySelector("#earnings").valueAsNumber;
     userBudget = document.querySelector(".weeklyBudget").innerText;
     console.log(userBudget);
@@ -50,3 +50,20 @@ function budgetValue(e) {
 
 let earned = (document.querySelector("#earnings"));
 document.querySelector("#earned").addEventListener("submit", budgetValue)
+
+let userExpenses;
+let expenseName;
+let expensePrice;
+let expensesArray = [];
+
+function expenseValue(e) {
+
+    e.preventDefault();
+    expenseName = document.querySelector(".Name").value;
+    expensePrice = document.querySelector(".Price").valueAsNumber;
+    console.log(expenseName);
+    console.log(expensePrice);
+
+}
+
+document.querySelector("#expenses-button").addEventListener("click", expenseValue);
