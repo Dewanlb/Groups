@@ -36,11 +36,16 @@
 //         console.log(earned)
 //     }
 // }
+
+let userBudget;
+
+
 function budgetValue(e) {
 
-    e.preventDefault();
+    // e.preventDefault();
     document.querySelector(".weeklyBudget").innerText = "$" + document.querySelector("#earnings").valueAsNumber;
-
+    userBudget = document.querySelector(".weeklyBudget").innerText;
+    console.log(userBudget);
 }
 
 let earned = (document.querySelector("#earnings"));
