@@ -54,6 +54,7 @@
   display: block;
   margin: auto;
   transition: 0.5s;
+
 }
 
 .nav-links ul li:hover::after {
@@ -504,8 +505,8 @@ article p:nth-child(odd) {
     background: rgb(253, 254, 233);
     font-weight: bold;
     cursor: pointer;
-    float: left;
-    margin-right: 10px;
+
+    margin-right: 31px;
   }
 
   .banner-title h1 {
@@ -519,5 +520,32 @@ article p:nth-child(odd) {
     width: 420px;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+  }
+
+  .budget-container {
+    height: 90px;
+    background: rgb(150, 150, 148);
+    margin: 10px 10px;
+    padding: 10px 10px;
+    padding-top: 20px;
+    border-radius: 10px;
+    text-align: -webkit-center;
+  }
+
+  .form-container {
+    height: 90px;
+    background: rgb(150, 150, 148);
+    margin: 10px 10px;
+    padding: 10px 10px;
+    padding-top: 20px;
+    border-radius: 10px;
+    display: inline-grid;
+    text-align: -webkit-center;
+  }
+
+  input.Items.Price {
+    -webkit-text-stroke-width: thick;
+    width: 107px;
+    height: 20px;
   }
 }
