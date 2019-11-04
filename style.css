@@ -378,13 +378,14 @@ article p:nth-child(odd) {
 
   .nav-links {
     height: 140vh;
-    width: 200px;
+    width: 260px;
     background: rgb(81, 91, 81);
     top: 0;
-    right: -200px;
+    right: -280px;
     position: absolute;
     text-align: left;
     z-index: 2;
+    transition: 0.5s;
   }
 
   .nav-links ul a {
@@ -465,14 +466,30 @@ article p:nth-child(odd) {
 
 
   input.Name {
-    line-height: 20px;
+    line-height: 22px;
     text-align: center;
-    float: right;
-    width: 75px;
+
+    width: 148px;
     margin-right: 9px;
+  }
+
+  article {
+    display: none;
+    width: 0;
+    height: 0;
   }
 
   #graphics {
     width: 298px;
+  }
+
+  input#expenses-button {
+    padding: 5px 20px;
+    border: 0;
+    background: rgb(253, 254, 233);
+    font-weight: bold;
+    cursor: pointer;
+    float: left;
+    margin-right: 10px;
   }
 }
