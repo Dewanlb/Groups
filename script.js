@@ -53,8 +53,26 @@ function expenseValue(e) {
     document.querySelector("#billsBar").style.width = `${totalBills/userBudget*100}%`;
     document.querySelector("#clothingBar").style.width = `${totalClothing/userBudget*100}%`;
     document.querySelector("#entertainmentBar").style.width = `${totalEnetertainment/userBudget*100}%`;
+    document.querySelector("article").innerHTML += `
+    <p class="itemized">
+   <span> ${expenseCategory}:</span> <span>${expenseName} </span><span> ${expensePrice}</span>
+    </p>
+    
+    
+    
+    `;
+    //animate
+    document.querySelectorAll("#graphics div").forEach(function (el) {
+        el.classList.add("animator");
+        setTimeout(function () {
+            el.classList.remove("animator");
+        }, 1001);
 
+    })
 }
+
+
+
 
 document
     .querySelector("#expenses-button")
