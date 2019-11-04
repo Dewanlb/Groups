@@ -18,8 +18,8 @@
       <div class="nav-logo">
         <img src="pocketpiggylogo2.png" />
       </div>
-      <div class="nav-links">
-        <section class="turnoff"><i class="fas fa-times"></i></section>
+      <div class="nav-links" id="nav-links">
+        <section class="turnoff"><i class="fas fa-times" onclick="showMenu()"></i></section>
         <ul>
           <a href="">
             <li>HOME</li>
@@ -33,7 +33,7 @@
         </ul>
         <button type="button" class="btn">SIGN UP</button>
       </div>
-      <section class="turnoff"><i class="fas fa-bars"></i></section>
+      <section class="turnoff"><i class="fas fa-bars" onclick="closeMenu()"></i></section>
     </div>
     <div class="banner-title">
       <h1>
@@ -60,7 +60,7 @@
               <h2> ENTER EXPENSES</h2>
               <!----------------- divider ---------------------->
               <div class="downContainer Rew">
-                <form>
+                <form class="expenses-form">
                   <select class="dropDownContent">
                     <option id="placeholder" value="placeholder">Select a Category</option>
                     <option id="entertainment" value="Entertainment">Entertainment</option>
@@ -106,9 +106,21 @@
     </div>
   </div>
   </div>
-
   <script src="script.js"></script>
   <script src="https://kit.fontawesome.com/65d69f953c.js" crossorigin="anonymous"></script>
+  <script>
+    var show = document.getElementById("nav-links");
+
+    function showMenu() {
+
+      show.style.right = "-200px";
+
+    }
+
+    function closeMenu() {
+      show.style.right = "0px";
+    }
+  </script>
 </body>
 
 </html>

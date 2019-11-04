@@ -167,6 +167,12 @@
 }
 
 
+.downContainer {
+  height: 70px;
+  /* display: flex; */
+  /* background: #0db666; */
+}
+
 .form-container {
   height: 90px;
   background: rgb(150, 150, 148);
@@ -371,11 +377,11 @@ article p:nth-child(odd) {
   }
 
   .nav-links {
-    height: 100vh;
+    height: 140vh;
     width: 200px;
     background: rgb(81, 91, 81);
     top: 0;
-    right: 0;
+    right: -200px;
     position: absolute;
     text-align: left;
     z-index: 2;
@@ -432,11 +438,41 @@ article p:nth-child(odd) {
     /* margin-top: 10px; */
   }
 
+  select.dropDownContent {
+    height: 29px;
+    margin-bottom: 3px;
+  }
+
+  .expenses-form {
+    height: 90px;
+  }
+
   .form-holder {
     height: 270px;
     /* background: orange; */
     width: 35%;
     margin: 14px 10px;
     width: unset;
+  }
+
+  #earnings {
+    width: 48%;
+    margin: 5px;
+    height: 30px;
+    text-align: center;
+    font-size: 10px;
+  }
+
+
+  input.Name {
+    line-height: 20px;
+    text-align: center;
+    float: right;
+    width: 75px;
+    margin-right: 9px;
+  }
+
+  #graphics {
+    width: 298px;
   }
 }
