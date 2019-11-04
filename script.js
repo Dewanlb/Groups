@@ -48,6 +48,12 @@ function expenseValue(e) {
     total expenses: ${totalExpenses}.
     savings left: ${totalSavings}. 
     `)
+    //for graphics
+    document.querySelector("#foodBar").style.width = `${totalFood/userBudget*100}%`;
+    document.querySelector("#billsBar").style.width = `${totalBills/userBudget*100}%`;
+    document.querySelector("#clothingBar").style.width = `${totalClothing/userBudget*100}%`;
+    document.querySelector("#entertainmentBar").style.width = `${totalEnetertainment/userBudget*100}%`;
+
 }
 
 document
