@@ -360,6 +360,15 @@ article p:nth-child(odd) {
 
   .nav-bar {
     padding: 10px 30px;
+    height: 80px;
+  }
+
+  .nav-logo img {
+    height: 60px;
+    width: 70px;
+    position: absolute;
+    top: -5px;
+    left: 10px;
   }
 
   .fa-bars {
