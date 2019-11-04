@@ -233,6 +233,7 @@ input#expenses-button {
   border-radius: 10px;
   overflow: hidden;
   margin-left: 0;
+  width: 880px;
 }
 
 .animator {
@@ -315,19 +316,11 @@ div#graphics {
 }
 
 article {
-  height: 300px;
+
   overflow-y: scroll;
   width: 40%;
-  margin: 15px 10px;
+
   padding: 10px 10px;
-}
-
-.itemized {
-  color: black;
-  display: flex;
-  justify-content: space-between;
-
-
 }
 
 .goButton {
@@ -342,7 +335,37 @@ article p:nth-child(odd) {
   background: beige;
 }
 
+article p:nth-child(even) {
+  background: rgb(255, 255, 255);
+}
 
+article {
+  background-color: rgb(180, 180, 166);
+  height: 238px;
+  margin: 26px 20px;
+}
+
+.itemized {
+  color: black;
+  display: flex;
+  height: 28px;
+  justify-content: space-between;
+
+
+
+}
+
+.listed {
+  height: 14px;
+  padding-top: 14px;
+  padding-left: 6px;
+  padding-right: 6px;
+  width: 105px;
+}
+
+.weeklyBudget {
+  margin-left: 5px;
+}
 
 @keyframes deficit {
   from {
@@ -351,6 +374,7 @@ article p:nth-child(odd) {
 
   to {}
 }
+
 
 @media (max-width: 816px) {
   .vertical-bar {
@@ -462,6 +486,7 @@ article p:nth-child(odd) {
 
   .expenses-form {
     height: 90px;
+    height: 70px;
   }
 
   .form-holder {
@@ -547,5 +572,6 @@ article p:nth-child(odd) {
     -webkit-text-stroke-width: thick;
     width: 107px;
     height: 20px;
+    margin-right: 55px;
   }
 }
