@@ -1,74 +1,55 @@
-// document.querySelector(".weeklyBudget").innerHTML = `
-// <div class="weeklybudget"> Number Goes Here
-// </div> `;
-
-
-// //test 2//
-// let earned = (document.querySelector("#earnings"));
-// document.querySelector("#earned").addEventListener("submit", function budgetValue(e) {
-
-//     e.preventDefault();
-//     document.querySelector(".weeklyBudget").innerHTML = (`$${earned.value}`);
-
-// })
-
-//Test 3
-// class UI {
-//     constructor(earned) {
-//         this.earned = document.querySelector(earned.value);
-//         console.log(this.earned);
-//         this.expenseFeedback = document.querySelector(".expense-feedback");
-//         this.budgetForm = document.getElementById("budget-form");
-//         this.budgetInput = document.getElementById("budget-input");
-//         this.budgetAmount = document.getElementById("budget-amount");
-//         this.expenseAmount = document.getElementById("expense-amount");
-//         this.balance = document.getElementById("balance");
-//         this.balanceAmount = document.getElementById("balance-amount");
-//         this.expenseForm = document.getElementById("expense-form");
-//         this.expenseInput = document.getElementById("expense-input");
-//         this.amountInput = document.getElementById("amount-input");
-//         this.expenseList = document.getElementById("expense-list");
-//         this.itemList = [];
-//         this.itemID = 0;
-//     }
-//     new UI {
-//         consturctor(earned)
-//         console.log(earned)
-//     }
-// }
-
-let userBudget;
-
+let userBudget = 0;
 
 function budgetValue(e) {
-
     e.preventDefault();
-    document.querySelector(".weeklyBudget").innerText = "$" + document.querySelector("#earnings").valueAsNumber;
-    userBudget = document.querySelector(".weeklyBudget").innerText;
+    let zeroFix = document.querySelector("#earnings").valueAsNumber || "0";
+    document.querySelector(".weeklyBudget").innerText =
+        "$" + zeroFix;
+    userBudget = document.querySelector(".weeklyBudget").innerText.slice(1);
     console.log(userBudget);
+    document.querySelector("#earned").style.display = "none";
 }
 
-let earned = (document.querySelector("#earnings"));
-document.querySelector("#earned").addEventListener("submit", budgetValue)
+let earned = document.querySelector("#earnings");
+document.querySelector("#earned").addEventListener("submit", budgetValue);
 
 let dropDownContent = document.querySelector(".dropDownContent");
-let userExpenses;
 let expenseName;
 let expensePrice;
 let expenseCategory;
 let expensesArray = [];
+let totalEnetertainment = totalFood = totalClothing = totalBills = totalExpenses = totalSavings = 0;
 
 function expenseValue(e) {
-
     e.preventDefault();
     expenseName = document.querySelector(".Name").value;
     expensePrice = document.querySelector(".Price").valueAsNumber;
-    expenseCategory = dropDownContent.options[dropDownContent.selectedIndex].value;
-    console.log(expenseName);
-    console.log(expensePrice);
-    console.log(expenseCategory);
+    expenseCategory =
+        dropDownContent.options[dropDownContent.selectedIndex].value;
+    console.log(`
+    Expense Category: ${expenseCategory}.
+    Expense Name: ${expenseName}.
+    Expense Price: ${expensePrice}.`);
     expensesArray.push([expenseCategory, expenseName, expensePrice]);
-
+    // totals cost of each item from each category
+    if (expenseCategory == "Entertainment") {
+        totalEnetertainment += expensePrice;
+    } else if (expenseCategory == "Food") {
+        totalFood += expensePrice;
+    } else if (expenseCategory == "Clothing") {
+        totalClothing += expensePrice;
+    } else if (expenseCategory == "Bills") {
+        totalBills += expensePrice;
+    }
+    totalExpenses = totalFood + totalBills + totalClothing + totalEnetertainment;
+    totalSavings = userBudget - totalExpenses;
+    console.log(`
+    budget: ${userBudget}.
+    total expenses: ${totalExpenses}.
+    savings left: ${totalSavings}. 
+    `)
 }
 
-document.querySelector("#expenses-button").addEventListener("click", expenseValue);
+document
+    .querySelector("#expenses-button")
+    .addEventListener("click", expenseValue);
