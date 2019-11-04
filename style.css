@@ -498,4 +498,11 @@ article p:nth-child(odd) {
     margin-bottom: 30px;
     color: rgb(255, 255, 214);
   }
+
+  .start-saving {
+
+    width: 420px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
 }
