@@ -51,9 +51,11 @@ function budgetValue(e) {
 let earned = (document.querySelector("#earnings"));
 document.querySelector("#earned").addEventListener("submit", budgetValue)
 
+let dropDownContent = document.querySelector(".dropDownContent");
 let userExpenses;
 let expenseName;
 let expensePrice;
+let expenseCategory;
 let expensesArray = [];
 
 function expenseValue(e) {
@@ -61,8 +63,11 @@ function expenseValue(e) {
     e.preventDefault();
     expenseName = document.querySelector(".Name").value;
     expensePrice = document.querySelector(".Price").valueAsNumber;
+    expenseCategory = dropDownContent.options[dropDownContent.selectedIndex].value;
     console.log(expenseName);
     console.log(expensePrice);
+    console.log(expenseCategory);
+    expensesArray.push([expenseCategory, expenseName, expensePrice]);
 
 }
 
