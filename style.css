@@ -1,4 +1,4 @@
-body {
+/* body {
   background-image: url();
   background-size: cover;
   background-repeat: no-repeat;
@@ -10,14 +10,14 @@ body {
       rgba(255, 215, 215, 0.6)),
     url(https://images.pexels.com/photos/302842/pexels-photo-302842.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
   background-size: cover;
-}
+} */
 
-h1 {
+/* h1 {
   font-size: 54px;
   text-align: center;
   font-family: "Staatliches";
   color: #0db666;
-}
+} */
 
 h2 {
   margin: 0px;
@@ -228,5 +228,248 @@ h2 {
 
   .downContainer {
     padding: 10px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.hero {
+  height: 100vh;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.133)),
+    url(BackgroundPic.png);
+
+  background-position: center;
+  background-size: cover;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.nav-bar {
+  display: flex;
+  padding: 20px 80px;
+}
+
+.nav-logo img {
+  height: 140px;
+  width: 160px;
+}
+
+.nav-links {
+  flex: 1;
+  align-self: center;
+}
+
+.nav-links ul {
+  margin-left: 50px;
+  display: inline;
+}
+
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: rgb(253, 254, 233);
+}
+
+.nav-links ul li::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background: rgba(255, 117, 246, 0.426);
+  display: block;
+  margin: auto;
+  transition: 0.3s;
+}
+
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: 0;
+  background: rgb(253, 254, 233);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.nav-links .btn {
+  float: right;
+}
+
+.banner-title {
+  margin: 10px 130px;
+  color: #fff;
+}
+
+.banner-title h1 {
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: rgb(255, 255, 214);
+}
+
+.banner-title h1 span {
+  color: rgb(202, 255, 196);
+}
+
+.vertical-bar {
+  height: 100%;
+  background: rgb(81, 91, 81);
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+.search-icon {
+  height: 150px;
+  width: 80px;
+}
+
+.search-icon i {
+  margin: 45px 23px;
+  display: block;
+  color: #fff;
+  font-size: 30px;
+  cursor: pointer;
+  color: rgb(203, 203, 203);
+}
+
+.social-icons {
+  height: 35%;
+  width: 80px;
+  background: rgb(253, 254, 233);
+  text-align: center;
+  padding-top: 27%;
+  bottom: 0;
+  position: absolute;
+  color: #888;
+}
+
+.social-icons i {
+  margin: 15px 23px;
+  display: block;
+  padding: 8px;
+  border: 1px solid rgb(81, 91, 81);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.jumbotron {
+  display: flex;
+  height: 300px;
+  background: #fff;
+  z-index: 2;
+  padding: 10px 20px;
+  width: 835px;
+}
+
+.form-holder {
+  height: 270px;
+  background: orange;
+  width: 35%;
+  margin: 14px 10px;
+}
+
+.budget-container {
+  height: 90px;
+  background: rgb(123, 28, 28);
+  margin: 10px 10px;
+  padding: 10px 10px;
+  padding-top: 20px;
+}
+
+.turnoff {
+  display: none;
+}
+
+@media (max-width: 816px) {
+  .vertical-bar {
+    display: none;
+  }
+
+  .banner-title {
+    margin: 80px 40px;
+  }
+
+  .banner-title h1 {
+    font-size: 20px;
+  }
+
+  .nav-bar {
+    padding: 10px 30px;
+  }
+
+  .fa-bars {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+  }
+
+  .nav-bar .fa {
+    display: block;
+    color: #fff;
+    margin: 10px 25px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+
+  .nav-links {
+    height: 100vh;
+    width: 200px;
+    background: rgb(81, 91, 81);
+    top: 0;
+    right: 0;
+    position: absolute;
+    text-align: left;
+    z-index: 2;
+  }
+
+  .nav-links ul a {
+    display: block;
+  }
+
+  .nav-links .btn {
+    float: none;
+    margin-left: 25px;
+    margin-top: 10px;
+  }
+
+  .turnoff {
+    display: inherit;
+  }
+
+  .fa,
+  .fas {
+    font-weight: 900;
+    font-size: xx-large;
+    position: static;
+    color: rgb(203, 203, 203);
+  }
+
+  .fa-bars {
+    position: absolute;
+    right: 5px;
+    top: 3px;
+    font-weight: 900;
+    color: rgb(203, 203, 203);
+    z-index: 3;
+  }
+
+  .banner-title {
+    margin: 10px 40px;
+  }
+
+  .banner-title h1 {
+    font-size: 15px;
+    margin-bottom: 30px;
+    color: rgb(255, 255, 214);
   }
 }

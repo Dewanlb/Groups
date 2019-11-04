@@ -5,6 +5,7 @@
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css?family=Patua+One&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/df78971db2.js" crossorigin="anonymous"></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -12,38 +13,92 @@
 </head>
 
 <body>
+  <div class="hero">
+    <div class="nav-bar">
+      <div class="nav-logo">
+        <img src="pocketpiggylogo2.png" />
+      </div>
+      <div class="nav-links">
+        <section class="turnoff"><i class="fas fa-times"></i></section>
+        <ul>
+          <a href="">
+            <li>HOME</li>
+          </a>
+          <a href="">
+            <li>BUDGET</li>
+          </a>
+          <a href="">
+            <li>EXPENSES</li>
+          </a>
+        </ul>
+        <button type="button" class="btn">SIGN UP</button>
+      </div>
+      <section class="turnoff"><i class="fas fa-bars"></i></section>
+    </div>
+    <div class="banner-title">
+      <h1>
+        Let piggy <span>help you</span>. <br />
+        Enter your <span>Budget</span> and <span>Expenses</span>.
+      </h1>
+      <button type="button" class="btn">START SAVING</button>
+      <div class="jumbotron">
+        <div class="form-holder">
+          <div class="budget-container">
+            <div class="displayWeeklyBudget">
+              <h2>WEEKLY BUDGET</h2>
+              <!----------------------- / Form 1 / ------------>
+              <form id="earned">
+                <input type="number" id="earnings" placeholder="Whats Your Budget?" />
+                <input id="submit" class="goButton" type="submit" value="Submit🤑" />
+              </form>
+              <!----------------- / Budget / ----------------->
+              <div class="weeklyBudget">Your Number Goes Here</div>
+            </div>
+          </div>
+          <div class="expense-container">
+            <div class="container">
+
+              <!----------------- divider ---------------------->
+              <div class="downContainer Rew">
+                <form>
+                  <select class="dropDownContent">
+                    <option id="placeholder" value="placeholder">Select a Category</option>
+                    <option id="entertainment" value="Entertainment">Entertainment</option>
+                    <option id="food" value="Food">Food</option>
+                    <option id="clothing" value="Clothing">Clothing</option>
+                    <option id="bills" value="Bills">Bills</option>
+                  </select>
+                  <input class="Items Name" placeholder="Name of Item" />
+                  <input type="number" class="Items Price" placeholder="Price of Item" />
+                  <input type="submit" value="Submit🤑" id="expenses-button" />
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="vertical-bar">
+    <div class="search-icon">
+      <i class="fas fa-th-list"></i>
+      <i class="fas fa-search"></i>
+    </div>
+    <div class="social-icons">
+      <i class="fab fa-facebook"></i>
+      <i class="fab fa-instagram"></i>
+      <i class="fab fa-twitter-square"></i>
+    </div>
+  </div>
+  </div>
+
   <!----------------------- / Title / ----------------->
   <h1>CAN YOU AFFORD IT?</h1>
   <!-------------------- / Section / ------------------>
   <section class="main">
     <!------------ Display Weekly Budget  ------------->
-    <div class="container">
-      <div class="displayWeeklyBudget">
-        <h2>WEEKLY BUDGET</h2>
-        <!----------------------- / Form 1 / ------------>
-        <form id="earned">
-          <input type="number" id="earnings" placeholder="Whats Your Budget?" />
-          <input id="submit" class="goButton" type="submit" value="Submit🤑" />
-        </form>
-        <!----------------- / Budget / ----------------->
-        <div class="weeklyBudget">Your Number Goes Here</div>
-      </div>
-      <!----------------- divider ---------------------->
-      <div class="downContainer Rew">
-        <form>
-          <select class="dropDownContent">
-            <option id="placeholder" value="placeholder">Select a Category</option>
-            <option id="entertainment" value="Entertainment">Entertainment</option>
-            <option id="food" value="Food">Food</option>
-            <option id="clothing" value="Clothing">Clothing</option>
-            <option id="bills" value="Bills">Bills</option>
-          </select>
-          <input class="Items Name" placeholder="Name of Item" />
-          <input type="number" class="Items Price" placeholder="Price of Item" />
-          <input type="submit" value="Submit🤑" id="expenses-button" />
-        </form>
-      </div>
-    </div>
+
 
     <!-- <div class="i"><i class="fas fa-plus "></i></div> -->
 
