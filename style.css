@@ -421,4 +421,22 @@ article p:nth-child(odd) {
     margin-bottom: 30px;
     color: rgb(255, 255, 214);
   }
+
+  .jumbotron {
+    display: flex;
+    height: 300px;
+    background: rgba(253, 254, 233, 0.31);
+    z-index: 2;
+    padding: 10px 20px;
+    width: 435px;
+    /* margin-top: 10px; */
+  }
+
+  .form-holder {
+    height: 270px;
+    /* background: orange; */
+    width: 35%;
+    margin: 14px 10px;
+    width: unset;
+  }
 }
